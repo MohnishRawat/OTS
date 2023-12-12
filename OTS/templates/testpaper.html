@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTS Testpeper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'Testpaper.css' %}">
+</head>
+
+<body>
+    <!-- This is container  -->
+    <div class="container">
+        <div class="logout">
+            <a href="{% url 'OTS:logout' %}" target="_blank"><button type="button">Logout</button></a>
+        </div>
+        <div class="title">Questions</div>
+        <div class="content">
+
+
+
+            <!-- form -->
+            <form action="{% url 'OTS:calculateTest' %}" name="myform" method="post">
+                {% csrf_token %}
+                {% for question in questions %}
+                <div class="question">
+                    <input type="hidden" name="qno{{question.qid}}" value="{{question.qid}}">
+                    {{question.ques}}
+                </div>
+                <div class="option"><input type="radio" name="q{{question.qid}}" value="a">{{question.a}}</div>
+                <div class="option"><input type="radio" name="q{{question.qid}}" value="b">{{question.b}}</div>
+                <div class="option"><input type="radio" name="q{{question.qid}}" value="c">{{question.c}}</div>
+                <div class="option"><input type="radio" name="q{{question.qid}}" value="d">{{question.d}}</div>
+                {% endfor %}
+                <div class="submit"><input type="submit" value="submit"></div>
+
+
+        </div>
+        </form>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTS Result</title>
+    <link rel="stylesheet" href="{% static 'Show_Result.css' %}">
+</head>
+
+<body>
+    <!-- This is container  -->
+    <div class="logout">
+        <a href="{% url 'OTS:logout' %}" target="_blank"><button type="button">Logout</button></a>
+    </div>
+    <div class="container">
+
+        <div class="title">Test Result</div>
+
+        <div class="content">
+
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Attempt</th>
+                    <th>Right</th>
+                    <th>Wrong</th>
+                    <th>Points</th>
+                </tr>
+
+                {% for r in result %}
+                <tr>
+                    <td>{{r.date}}</td>
+                    <td>{{r.time}}</td>
+                    <td>{{r.attempts}}</td>
+                    <td>{{r.right}}</td>
+                    <td>{{r.wrong}}</td>
+                    <td>{{r.points}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

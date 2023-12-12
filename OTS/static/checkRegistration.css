@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+
+    background: rgb(0, 8, 19);
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    /* background-color: #fff; */
+    background: transparent;
+    /* color: wheat; */
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container .title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 1000;
+    position: relative;
+    cursor: default;
+
+}
+
+
+
+.content .login-btn {
+    max-width: 400px;
+    width: 100%;
+    height: 100px;
+
+    margin: 5px 0px;
+}
+
+.user-status p {
+    cursor: default;
+}
+
+.content .login-btn {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    background: linear-gradient(135deg, #fa709979 0%, #fee1404a 100%);
+}
+
+
+.content .login-btn:hover {
+    /* transform: scale(0.99); */
+    background: transparent;
+}
+
+form .forgot a {
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    /* text-decoration: none; */
+}
+
+
+
+
+
+@media (max-width:584px) {
+
+    .container {
+        max-width: 100%;
+    }
+
+
+    .user-details::-webkit-scrollbar {
+        width: 5px;
+    }
+
+
+}
+
+@media(max-width: 459px) {
+    .container .content .category {
+        flex-direction: column;
+    }
+}
