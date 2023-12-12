@@ -1,0 +1,160 @@
+:root {
+    --black: #000000;
+    --darkBlue: #2C1E4A;
+    --voilet: #D73CBE;
+    --blue: #3C205D;
+    --white: #F2F2F2;
+}
+
+:root {
+
+
+    --folly: #F13652ff;
+    --rusty-red: #E13545ff;
+    --atomic-tangerine: #FC985Cff;
+    --indigo-dye: #095278ff;
+    --rich-black: #000813ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--white);
+
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 10px;
+    background-image: url('./image/blue-red-neon-vivid-colors-5k-a7.jpg');
+
+    background-position: center center;
+
+    /* Image doesn't repeat */
+    background-repeat: no-repeat;
+
+    /* Makes the image fixed in the viewport so that it doesn't move when 
+    the content height is greater than the image height */
+    background-attachment: fixed;
+
+    /* This is what makes the background image rescale based on its container's size */
+    background-size: cover;
+
+}
+
+.main-container {
+    /* position: absolute; */
+    /* top: 155px;
+    left: 150px; */
+    flex-wrap: wrap;
+    max-width: 100vw;
+    width: 100%;
+    padding: 25px 30px;
+    flex-wrap: wrap;
+
+
+
+}
+
+#wellcome {
+    /* display: inline; */
+    /* width: 100vw; */
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.main-container h2 {
+    position: relative;
+    top: -8px;
+    left: 50px;
+    font-size: 1.2rem;
+    font-family: 'Josefin', sans-serif;
+
+}
+
+.main-container .making-date {
+    position: relative;
+    top: 100px;
+    font-family: 'Josefin', sans-serif;
+    font-weight: 100;
+    font-size: medium;
+}
+
+.login-btn {
+    display: inline;
+}
+
+.main-container .login-btn button {
+    font-size: medium;
+    font-weight: bold;
+    position: relative;
+    top: 200px;
+    max-width: 200px;
+    width: 100%;
+    height: 35px;
+    margin: 3px 0px;
+    border: NONE;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.20s ease;
+    letter-spacing: 1px;
+
+
+}
+
+.login-btn a {
+    text-decoration: none;
+    color: black;
+
+
+}
+
+.main-container .login-btn :hover {
+    background: linear-gradient(1deg(--blue), var(--voilet));
+    color: #fff;
+
+
+}
+
+.main-container img {
+
+    position: absolute;
+    top: -30px;
+    right: -500px;
+    /* margin-left: 555px; */
+}
+
+@media screen and (max-width:600px) {
+
+
+
+    .main-container {
+        /* flex-wrap: wrap; */
+
+        max-width: 100vw;
+
+        position: absolute;
+        top: 100px;
+        padding: 10px;
+        /* padding-left: 10px; */
+
+
+    }
+
+    .main-container h1 {
+        font-size: 1em;
+
+    }
+
+    .main-container h2 {
+        width: 100%;
+        font-size: 1em;
+        position: absolute;
+        left: 20px;
+        top: 35%;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{% static 'registration.css' %}">
+
+
+</head>
+
+<body>
+    <!-- This is container  -->
+    <div class="container">
+        <div class="title">Registration</div>
+
+        <div class="content">
+            <!-- form -->
+            <form action="{% url 'OTS:Registration'%}" name="myform" onsubmit="return validateForm()" method="post">
+                {% csrf_token %}
+
+                <!-- Username -->
+                <div class="user-details">
+                    <div class="input-box" id="name">
+                        <span class="details">Username</span>
+                        <input type="text" placeholder="Enter Your Username" class="formError" name="username" required>
+                    </div>
+
+                    <!-- name -->
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter Your name" name="fname" required>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="Password" placeholder="Enter Your Password" name="fpass" required>
+                    </div>
+
+
+
+                </div>
+
+        </div>
+        <div class="button">
+            <input type="submit" value="Register">
+        </div>
+        </form>
+    </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
